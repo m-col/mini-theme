@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+
+{% block title %}{{ SITENAME }} / {{ article.title }}{% endblock %}
+
+
+{% block extra_meta %}
+	{% if article.description %}
+	<meta name="description" content="{{article.description}}" />
+	{% endif %}
+{% endblock %}
+
+
+{% block header %}
+<a href=/>mcol.xyz</a> / <a href=/{{ ARCHIVES_SAVE_AS }}>{{ ARCHIVES_TITLE }}</a> / <a href=/{{ output_file }}>{{ article.title }}</a>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="art">
+	{{ article.content }}
+</div>
+
+<footer><hr>
+Published @ <time class="pub" datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+{% if article.category %}in <a href="/{{ article.category.url }}">{{ article.category }}</a>{% endif %}
+
+{% if article.modified %}
+/ <span class=mod>Modified <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time><span>
+{% endif %}
+</footer>
+
+{% endblock %}
