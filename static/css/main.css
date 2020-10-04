@@ -6,7 +6,7 @@
     /* code colours */
     --c0: #030405; /* dark */
     --c1: #8742a5; /* red */
-    --c2: #e6df52; /* green */
+    --c2: #FFFFFF; /* green */
     --c3: #406794; /* yellow */
     --c4: #8f4ff0; /* blue */
     --c5: var(--trim); /* purple */
@@ -161,8 +161,13 @@ pre a.d:hover {
 }
 
 .highlight {
+    background: #dedefe;
     white-space: pre-wrap;
     word-wrap: break-word;
+}
+
+code {
+    background: #dedefe;
 }
 
 .err { color: var(--c1); } /* Error */
