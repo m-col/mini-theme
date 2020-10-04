@@ -20,6 +20,10 @@
 
 {{ article.content }}
 
+{% if ARTICLE_FEEDBACK %}
+<hr>{{ ARTICLE_FEEDBACK }}
+{% endif %}
+
 <footer><hr>
 Published @ <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 {% if article.category %}in <a href="/{{ article.category.url }}">{{ article.category }}</a>{% endif %}
