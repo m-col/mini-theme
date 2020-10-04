@@ -21,16 +21,16 @@
 {{ article.content }}
 
 {% if ARTICLE_FEEDBACK %}
-<hr>{{ ARTICLE_FEEDBACK }}
+<hr><p>{{ ARTICLE_FEEDBACK }}</p>
 {% endif %}
 
 <footer><hr>
-Published @ <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
+<p>Published @ <time datetime="{{ article.date.isoformat() }}">{{ article.locale_date }}</time>
 {% if article.category %}in <a href="/{{ article.category.url }}">{{ article.category }}</a>{% endif %}
 
 {% if article.modified %}
 / <span class=mod>Modified <time datetime="{{ article.modified.isoformat() }}">{{ article.locale_modified }}</time><span>
-{% endif %}
+{% endif %}</p>
 </footer>
 
 {% endblock %}
