@@ -15,6 +15,10 @@ body {
     max-width: 900px;
 }
 
+p {
+    margin: 15px 0;
+}
+
 li {
     list-style-type: square;
 }
